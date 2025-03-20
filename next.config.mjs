@@ -16,6 +16,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  // When deploying to GitHub Pages, set the base path to the repository name
+  // Remove this line or set to '' if deploying to a custom domain
+  basePath: process.env.GITHUB_ACTIONS && process.env.NODE_ENV === 'production' ? '/mcp_info_presentation' : '',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
